@@ -22,7 +22,6 @@ def getColor(groups, use_max=True):
         groups = np.argmax(groups, -1)
         return [BASIC_COLORS[int(groups[i])] for i in range(groups.shape[0])]
     else:
-        # TODO(toru): implement probabilities-based gradient
         g_min = np.amin(groups)
         groups -= g_min
         raise NotImplementedError

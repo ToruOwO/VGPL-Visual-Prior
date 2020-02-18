@@ -57,8 +57,8 @@ def chamfer_loss_frame_wise(x, y):
 
 def chamfer_loss_with_grouping(x, gx, y, gy):
     """
-    Temporal chamfer loss with grouping
-    Label must be turned into one-hot vectors before hand
+    Temporal chamfer loss with grouping.
+    Label must be turned into one-hot vectors before hand.
 
     Input:
         x: tensor of shape (B, T, 3, N)
