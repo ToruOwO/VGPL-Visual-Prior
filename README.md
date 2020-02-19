@@ -29,10 +29,6 @@ The following files can be run directly; see "Training and evaluation" section f
 
 `eval.py` evaluates a trained model by visualizing its predictions, and/or stores the output predictions in `.h5` format.
 
-## Dataset preparation
-
-After generating datasets, update paths to data directories stored in `_DATA_DIR` in `dataset.py`.
-
 ## Training and evaluation
 
 See `config.py` for more details on customizable configurations.
