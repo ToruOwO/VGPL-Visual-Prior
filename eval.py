@@ -179,10 +179,7 @@ def main(args):
     print('- Configuration:')
     print(config)
 
-    if config.dataset == 'FluidIceShake':
-        n_groups = 2
-        n_particles = 348
-    elif config.dataset == 'RigidFall':
+    if config.dataset == 'RigidFall':
         n_groups = 3
         n_particles = 192
     elif config.dataset == 'MassRope':

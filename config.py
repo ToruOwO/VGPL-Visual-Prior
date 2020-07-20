@@ -15,7 +15,7 @@ def get_default():
     config.load_path = ''
     config.debug = False
 
-    config.dataset = 'FluidIceShake'  # 'RigidFall', 'FluidIceShake', 'MassRope'
+    config.dataset = 'RigidFall'  # 'RigidFall', 'MassRope'
     config.batch_size = 50
 
     config.n_frames = 1

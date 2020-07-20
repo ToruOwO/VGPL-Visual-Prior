@@ -8,14 +8,12 @@ from torch.utils.data import Dataset, DataLoader
 # paths to data directories
 _DATA_DIR = {
     'RigidFall': './data_RigidFall/',
-    'FluidIceShake': './data_FluidIceShake/',
     'MassRope': './data_MassRope/',
 }
 
 # number of frames dropped from beginning of each video
 _N_DROP_FRAMES = {
     'RigidFall': 0,
-    'FluidIceShake': 30,
     'MassRope': 20,
 }
 
@@ -74,11 +72,11 @@ def denormalize(images):
 class PhyDataset(Dataset):
     """
     Dataset for physical scene observations.
-    Available environments: 'RigidFall', 'FluidIceShake', 'MassRope'
+    Available environments: 'RigidFall', 'MassRope'
     """
 
     def __init__(self, name, split):
-        if name not in ['RigidFall', 'FluidIceShake', 'MassRope']:
+        if name not in ['RigidFall', 'MassRope']:
             raise ValueError('Invalid dataset name {}.'.format(name))
         if split not in ['train', 'valid']:
             raise ValueError('Invalid dataset split {}.'.format(split))
@@ -94,11 +92,6 @@ class PhyDataset(Dataset):
                 return 4500
             else:
                 return 500
-        elif self._name == 'FluidIceShake':
-            if self._split == 'train':
-                return 1800
-            else:
-                return 200
         else:  # 'MassRope'
             if self._split == 'train':
                 return 2700
@@ -118,10 +111,6 @@ class PhyDataset(Dataset):
             groups = np.array([0 for _ in range(64)]
                               + [1 for _ in range(64)]
                               + [2 for _ in range(64)])
-        elif self._name == 'FluidIceShake':
-            positions = positions[:, :-5, :]
-            groups = np.array([0 for _ in range(300)]
-                              + [1 for _ in range(48)])
         else:  # 'MassRope'
             positions = positions[:-1, :-1, :]
             groups = np.array([0 for _ in range(81)]
