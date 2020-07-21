@@ -7,8 +7,8 @@ from torch.utils.data import Dataset, DataLoader
 
 # paths to data directories
 _DATA_DIR = {
-    'RigidFall': './data_RigidFall/',
-    'MassRope': './data_MassRope/',
+    'RigidFall': './data/data_RigidFall/',
+    'MassRope': './data/data_MassRope/',
 }
 
 # number of frames dropped from beginning of each video
@@ -85,18 +85,12 @@ class PhyDataset(Dataset):
         self._split = split
         self._data_dir = os.path.join(
             _DATA_DIR[name], '{}_vision'.format(split))
+        self._data_len = None
 
     def __len__(self):
-        if self._name == 'RigidFall':
-            if self._split == 'train':
-                return 4500
-            else:
-                return 500
-        else:  # 'MassRope'
-            if self._split == 'train':
-                return 2700
-            else:
-                return 300
+        if self._data_len is None:
+            self._data_len = len(os.listdir(self._data_dir))
+        return self._data_len
 
     def __getitem__(self, idx):
         if idx >= len(self) or idx < 0:
