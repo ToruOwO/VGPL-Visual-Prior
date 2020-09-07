@@ -45,9 +45,9 @@ The following files can be run directly; see "Training and evaluation" section f
 
 ## Training and evaluation
 
-<!-- Download the training data from the following links, and put them in the `data` folder.
+Download the training and evaluation data from the following links, and put them in the `data` folder.
 
-[[MassRope]](https://www.dropbox.com/s/mqc87hwo9sdubnu/data_MassRope.zip?dl=0) [[RigidFall]](https://www.dropbox.com/s/hra0okrkg99h0bb/data_RigidFall.zip?dl=0) -->
+[[MassRope]](https://www.dropbox.com/s/j5lla86qsurjn1k/data_MassRope.zip?dl=0) [[RigidFall]](https://www.dropbox.com/s/ho8lgi35se75irh/data_RigidFall.zip?dl=0)
 
 See `config.py` for more details on customizable configurations.
 
