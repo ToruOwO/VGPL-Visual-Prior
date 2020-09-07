@@ -12,9 +12,11 @@ Yunzhu Li, Toru Lin*, Kexin Yi*, Daniel M. Bear, Daniel L. K. Yamins, Jiajun Wu,
 
 ## Demo
 
-Predictions from our learned model
+Ground truths and predictions from our learned model
 
-![](imgs/MassRope.gif)  ![](imgs/RigidFall.gif)
+![](imgs/MassRope_RGB.gif) ![](imgs/MassRope.gif)
+
+![](imgs/RigidFall_RGB.gif) ![](imgs/RigidFall.gif)
 
 
 ## Prerequisites
@@ -53,15 +55,15 @@ See `config.py` for more details on customizable configurations.
 
 To train the model:
 
-`python train.py --set loss_type chamfer dataset RigidFall`
+`python train.py --set loss_type l2 dataset RigidFall`
 
 To debug (by overfitting model on small batch of data):
 
-`python train.py --set loss_type chamfer dataset RigidFall debug True`
+`python train.py --set loss_type l2 dataset RigidFall debug True`
 
 To evaluate a trained model and generate outputs:
 
-`python eval.py --set loss_type chamfer dataset RigidFall n_frames 4 n_frames_eval 10 load_path [path]`
+`python eval.py --set loss_type l2 dataset RigidFall n_frames 4 n_frames_eval 10 load_path [path]`
 
 
 ## Citing VGPL
