@@ -12,11 +12,14 @@ Yunzhu Li, Toru Lin*, Kexin Yi*, Daniel M. Bear, Daniel L. K. Yamins, Jiajun Wu,
 
 ## Demo
 
-Ground truths and predictions from our learned model
+Input RGB videos and predictions from our learned model
 
-![](imgs/MassRope_RGB.gif) ![](imgs/MassRope.gif)
-
-![](imgs/RigidFall_RGB.gif) ![](imgs/RigidFall.gif)
+<p align="center">
+  <img src="https://github.com/ToruOwO/VGPL-Visual-Prior/blob/public/imgs/MassRope_RGB.gif">
+  <img src="https://github.com/ToruOwO/VGPL-Visual-Prior/blob/public/imgs/RigidFall_RGB.gif">
+  <img src="https://github.com/ToruOwO/VGPL-Visual-Prior/blob/public/imgs/MassRope.gif">
+  <img src="https://github.com/ToruOwO/VGPL-Visual-Prior/blob/public/imgs/RigidFall.gif">
+</p>
 
 ## Prerequisites
 
@@ -48,9 +51,9 @@ The following files can be run directly; see "Training and evaluation" section f
 
 Download the training and evaluation data from the following links, and put them in `data` folder. Optionally, download our trained model checkpoints and put them in `dump` folder.
 
-- MassRope [[data]](https://www.dropbox.com/s/j5lla86qsurjn1k/data_MassRope.zip?dl=0)(4.89GB) [[model]](https://www.dropbox.com/s/48ocpovd5svczfh/mass_rope_4frame_l2.pth?dl=0)
+- MassRope [[data(4.89GB)]](https://www.dropbox.com/s/j5lla86qsurjn1k/data_MassRope.zip?dl=0) [[model]](https://www.dropbox.com/s/48ocpovd5svczfh/mass_rope_4frame_l2.pth?dl=0)
 
-- RigidFall [[data]](https://www.dropbox.com/s/ho8lgi35se75irh/data_RigidFall.zip?dl=0)(4.87GB) [[model]](https://www.dropbox.com/s/akhy49ksn8sv3md/rigid_fall_4frame_l2.pth?dl=0)
+- RigidFall [[data(4.87GB)]](https://www.dropbox.com/s/ho8lgi35se75irh/data_RigidFall.zip?dl=0) [[model]](https://www.dropbox.com/s/akhy49ksn8sv3md/rigid_fall_4frame_l2.pth?dl=0)
 
 To train a model:
 
