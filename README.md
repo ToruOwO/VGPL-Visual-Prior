@@ -50,7 +50,7 @@ Download the training and evaluation data from the following links, and put them
 
 - MassRope[[Dropbox]](https://www.dropbox.com/s/j5lla86qsurjn1k/data_MassRope.zip?dl=0)(4.89GB)
 
-RigidFall[[Dropbox]](https://www.dropbox.com/s/ho8lgi35se75irh/data_RigidFall.zip?dl=0)(4.87GB)
+- RigidFall[[Dropbox]](https://www.dropbox.com/s/ho8lgi35se75irh/data_RigidFall.zip?dl=0)(4.87GB)
 
 To train a model:
 
