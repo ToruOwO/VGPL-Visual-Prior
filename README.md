@@ -18,7 +18,6 @@ Ground truths and predictions from our learned model
 
 ![](imgs/RigidFall_RGB.gif) ![](imgs/RigidFall.gif)
 
-
 ## Prerequisites
 
 - Python 3
@@ -47,13 +46,13 @@ The following files can be run directly; see "Training and evaluation" section f
 
 ## Training and evaluation
 
-Download the training and evaluation data from the following links, and put them in the `data` folder.
+Download the training and evaluation data from the following links, and put them in `data` folder.
 
-[[MassRope]](https://www.dropbox.com/s/j5lla86qsurjn1k/data_MassRope.zip?dl=0) [[RigidFall]](https://www.dropbox.com/s/ho8lgi35se75irh/data_RigidFall.zip?dl=0)
+- MassRope[[Dropbox]](https://www.dropbox.com/s/j5lla86qsurjn1k/data_MassRope.zip?dl=0)(4.89GB)
 
-See `config.py` for more details on customizable configurations.
+RigidFall[[Dropbox]](https://www.dropbox.com/s/ho8lgi35se75irh/data_RigidFall.zip?dl=0)(4.87GB)
 
-To train the model:
+To train a model:
 
 `python train.py --set loss_type l2 dataset RigidFall`
 
@@ -65,6 +64,7 @@ To evaluate a trained model and generate outputs:
 
 `python eval.py --set loss_type l2 dataset RigidFall n_frames 4 n_frames_eval 10 load_path [path]`
 
+See `config.py` for more details on customizable configurations.
 
 ## Citing VGPL
 
