@@ -19,7 +19,7 @@ def get_default():
     config.batch_size = 50
 
     config.n_frames = 1
-    config.loss_type = 'chamfer'  # 'l2', 'chamfer'
+    config.loss_type = 'l2'  # 'l2', 'chamfer'
     config.group_loss_weight = 1.0  # loss = pos_loss + w * grp_loss
     config.lr = 1e-4
     config.n_epochs = 50

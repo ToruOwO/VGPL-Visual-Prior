@@ -46,11 +46,11 @@ The following files can be run directly; see "Training and evaluation" section f
 
 ## Training and evaluation
 
-Download the training and evaluation data from the following links, and put them in `data` folder.
+Download the training and evaluation data from the following links, and put them in `data` folder. Optionally, download our trained model checkpoints and put them in `dump` folder.
 
-- MassRope[[Dropbox]](https://www.dropbox.com/s/j5lla86qsurjn1k/data_MassRope.zip?dl=0)(4.89GB)
+- MassRope [[data]](https://www.dropbox.com/s/j5lla86qsurjn1k/data_MassRope.zip?dl=0)(4.89GB) [[model]](https://www.dropbox.com/s/48ocpovd5svczfh/mass_rope_4frame_l2.pth?dl=0)
 
-- RigidFall[[Dropbox]](https://www.dropbox.com/s/ho8lgi35se75irh/data_RigidFall.zip?dl=0)(4.87GB)
+- RigidFall [[data]](https://www.dropbox.com/s/ho8lgi35se75irh/data_RigidFall.zip?dl=0)(4.87GB) [[model]](https://www.dropbox.com/s/akhy49ksn8sv3md/rigid_fall_4frame_l2.pth?dl=0)
 
 To train a model:
 
@@ -60,9 +60,10 @@ To debug (by overfitting model on small batch of data):
 
 `python train.py --set loss_type l2 dataset RigidFall debug True`
 
-To evaluate a trained model and generate outputs:
+To evaluate a trained model and generate outputs using our provided checkpoints:
 
-`python eval.py --set loss_type l2 dataset RigidFall n_frames 4 n_frames_eval 10 load_path [path]`
+    python eval.py --set loss_type l2 dataset RigidFall n_frames 4 n_frames_eval 30 load_path dump/rigid_fall_4frame_l2.pth
+    python eval.py --set loss_type l2 dataset MassRope n_frames 4 n_frames_eval 30 load_path dump/mass_rope_4frame_l2.pth
 
 See `config.py` for more details on customizable configurations.
 
