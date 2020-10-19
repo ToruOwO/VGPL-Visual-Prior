@@ -1,6 +1,6 @@
 # VGPL-Visual-Prior
 
-PyTorch implementation for the visual prior componenet (i.e. percetion module) of the Visually Grounded Physics Learner (VGPL).
+PyTorch implementation for the visual prior component (i.e. perception module) of the Visually Grounded Physics Learner (VGPL).
 Given visual obseravtions, the visual prior proposes their corresponding particle representations, in the form of particle positions and groupings. Please see the following paper for more details.
 
 **Visual Grounding of Learned Physical Models**
